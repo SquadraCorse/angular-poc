@@ -31,18 +31,7 @@ module.exports = function (grunt) {
 				hostname: 'localhost',
                 base: './'
 			},
-			webserver: {
-				options: {
-					port: 8888
-				}
-			},
-			devserver: {
-				options: {
-					port: 8000,
-					open: 'http://localhost:8000/index.html'
-				}
-			},
-			testserver: {
+			test: {
 				options: {
 					port: 8000
 				}
@@ -72,10 +61,6 @@ module.exports = function (grunt) {
 		},
 
 
-
-
-
-
 		uglify: {
 			app: {
 				files: {
@@ -96,6 +81,7 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+
 
 		protractor: {
 			options: {
@@ -162,8 +148,8 @@ module.exports = function (grunt) {
 	grunt.registerTask('test:unit', ['karma:unit']);
 
 	// E2E TESTING
-	grunt.registerTask('e2e:dev', ['connect:testserver', 'protractor:dev']);
-	grunt.registerTask('e2e:sauce', ['connect:testserver', 'protractor:sauce']);
+	grunt.registerTask('e2e:dev', ['connect:test', 'protractor:dev']);
+	grunt.registerTask('e2e:sauce', ['connect:test', 'protractor:sauce']);
 
 	// SHELL
 	grunt.registerTask('install', ['shell:npm_install']);

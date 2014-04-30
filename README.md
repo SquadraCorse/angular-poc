@@ -4,20 +4,22 @@
 
 Demonstration showing benefits using framework like Angular. Current setup:
 
--Github
--CodeShip (hook to github, doing unit tests and deploy to heroku)
--Heroku/cloud
--Travis-ci
+- Github
+- CodeShip (hook to github, doing unit tests and deploy to heroku)
+- Travis-ci
+- Sauce Labs
+- Heroku
 
 <img src="https://travis-ci.org/SquadraCorse/angular-poc.svg?branch=master" /><br />
 <img src="https://www.codeship.io/projects/7aef6a10-b206-0131-890f-4214b91a45ce/status" />
 
 
-## Status
-https://github.com/SquadraCorse/angular-poc 
-https://www.codeship.io/projects/20027 
-https://travis-ci.org/SquadraCorse/angular-poc 
-http://travel-search.herokuapp.com/ 
+## Resources
+1. https://github.com/SquadraCorse/angular-poc (source code)
+2. https://www.codeship.io/projects/20027 (codeship setup: from commit master to publishing on Heorku)
+3. https://travis-ci.org/SquadraCorse/angular-poc (travis: do grunt build (packaging) and unit and e2e testing)
+4. http://travel-search.herokuapp.com/ (heroku: deploy app)
+
 
 ### Running the app during development
 
