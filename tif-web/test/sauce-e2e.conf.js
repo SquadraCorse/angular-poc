@@ -18,14 +18,14 @@ exports.config = {
         'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
         'build': process.env.TRAVIS_BUILD_NUMBER,
         'name': 'POC build IE8 ' + process.env.TRAVIS_BUILD_NUMBER
-    }, {
+    }/*, {
         'browserName': 'opera',
         'platform': 'Windows 7',
         'version': '12',
         'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
         'build': process.env.TRAVIS_BUILD_NUMBER,
         'name': 'POC build OPERA ' + process.env.TRAVIS_BUILD_NUMBER
-    } /*
+    }
         'browserName': 'android',
         'platform': 'Linux',
         'version': '4.3',
