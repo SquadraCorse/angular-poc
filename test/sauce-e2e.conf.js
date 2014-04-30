@@ -12,8 +12,8 @@ exports.config = {
         'name': 'POC build CHROME ' + process.env.TRAVIS_BUILD_NUMBER
     }, {
         'browserName': 'internet explorer',
-        "platform": "Windows XP",
-        "version": "8",
+        "platform": "Windows 8.1",
+        "version": "11",
         'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
         'build': process.env.TRAVIS_BUILD_NUMBER,
         'name': 'POC build IE8 ' + process.env.TRAVIS_BUILD_NUMBER
