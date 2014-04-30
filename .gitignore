@@ -1,0 +1,9 @@
+*.iml
+.settings
+.project
+.idea
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+*.bat
+*.DS_Store

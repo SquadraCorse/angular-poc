@@ -1,0 +1,42 @@
+<!doctype html>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="my-app">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>TIF: NG version BUILD</title>
+
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="//www.klm.com/ams/frontend/css/core-nl.css" />
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+
+    <!--[if lte IE 7]>
+        <script src="js/lib/json3.js"></script>
+    <![endif]-->
+
+    <!-- FULL LIBRARIES NOT FOR PRODUCTION -->
+    <!-- REMOVED BOWER SINCE KL STILL BLOCKS GIT PORT -->
+    
+    <script src="../../target/static/js/lib.js"></script>
+    <script src="../../target/static/js/app.js"></script>
+
+</head>
+
+<body>
+
+    <div class="view-container">
+        <div ng-view class="tif-app"></div>
+    </div>
+
+    <!--[if lte IE 7]>
+        Voor prutsers zoals jij maken we een alternatieve overzichtpagina met een formulier waarop je filters kan aangeven. Dit werk zal niet meer dan 2 dagen in beslag mogen nemen en bieden, feitelijk alles maar in de meest gestripte vorm.
+    <![endif]-->
+
+</body>
+</html>

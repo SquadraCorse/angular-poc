@@ -1,0 +1,145 @@
+<div class="tif-navigation">
+  <div class="g-grid--row">
+      <div class="g-grid--indent">
+          <div class="g-grid--span12">
+
+            <p class="g-clear">
+
+              <input ng-model="query" class="g-forms-text tif-forms-search" placeholder="Search" />
+
+              <select ng-model="ordering" class="g-forms-selectbox tif-forms-order">
+                <option value="popularity">Populair</option>
+                <option value="destinationCode">Alphabetical</option>
+              </select>
+            </p>
+
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="g-grid--row tif-title">
+    <div class="g-grid--indent">
+        <div class="g-grid--span12">
+
+          <h1 class="g-h1 ng-cloak">{{filteredDestinations.length}} bestemmingen</h1>
+
+        </div>
+    </div>
+</div>
+
+<div class="g-grid--row">
+    <div class="g-grid--indent">
+        <div class="g-grid--span12">
+
+          <div>
+              Continents:
+              <label ng-repeat="continent in continents">
+                  <input
+                          type="checkbox"
+                          value="{{continent}}"
+                          ng-checked="filter.continents.indexOf(continent) > -1"
+                          ng-click="toggleContinent(continent)"
+                          > {{continent}}
+              </label>
+          </div>
+          <div>
+              Countries:
+              <label ng-repeat="country in countries">
+                  <input
+                          type="checkbox"
+                          value="{{country}}"
+                          ng-checked="filter.countries.indexOf(country) > -1"
+                          ng-click="toggleCountry(country)"
+                          > {{country}}
+              </label>
+          </div>
+          <div>
+              Themes:
+              <label ng-repeat="theme in themes">
+                  <input
+                          type="checkbox"
+                          value="{{theme}}"
+                          ng-checked="filter.themes.indexOf(theme) > -1"
+                          ng-click="toggleTheme(theme)"
+                          > {{theme}}
+              </label>
+          </div>
+
+
+          <p>{{filterState}}</p>
+
+
+        </div>
+    </div>
+</div>
+  
+
+  <div class="g-grid--row" ng-repeat="destination in (filteredDestinations = (destinations | filter: filterFunction | filter:query | orderBy:config.orderProp:config.reverse)) | limitTo:config.limit">
+
+      {{$index + 1}} {{destination.popularity}}
+
+      <div class="g-grid--indent tif-destination g-clear">
+          <div class="g-grid--span8">
+            
+            <a href="#/destinations/{{destination.destinationCode}}">
+              {{destination.countryCode}}
+              <h2 class="g-h1">{{destination.destinationCode}}</h2>
+              {{destination.minimumPrice.currency}} {{destination.minimumPrice.displayPrice}}
+            </a>
+
+            <p class="tif-intro">{{destination.introText}}</p>
+
+            <p>{{destination.flightDuration.hours}} {{destination.flightDuration.minutes}}</p>
+            <p>{{destination.themes}}</p>
+
+          </div>
+          <div class="g-grid--span4">
+
+            <a href="#/destinations/{{destination.destinationCode}}" class="tif-search-image-wrapper" ng-if="destination.visualUrlSmall">
+              <div ng-if="destination.visualUrlSmall" tif-lazy-image="http://www.klm.com{{destination.visualUrlSmall}}" class="tif-search-image"></div>
+
+
+              <p class="tif-caption-wrapper"><span class="tif-caption-text">{{destination.caption | truncate:30}}</span></p>
+              
+            </a>
+
+          </div>
+      </div>
+
+  </div>
+
+
+
+
+
+<div class="g-grid--row">
+    <div class="g-grid--indent">
+        <div class="g-grid--span12">
+          <p>
+            <button class="g-btn g-btn-toneddown" more-destinations><span>More destinations</span></button>
+          </p>
+        </div>
+    </div>
+</div>
+
+
+<!--
+    "destinationCode":"AAL",
+    "countryCode":"DK",
+    "continentCode":"EUR",
+    "flightDuration":{"hours":1,"minutes":20},
+    "minTemperature":12,"maxTemperature":20,
+    "popularity":5,
+    "minimumPrice":{"currency":"EUR","displayPrice":178.0},
+    "themes":["ART","CUL","ROM"],
+    "coordinates":{"lat":57.08944,"lon":9.84889},
+    "introText": "Zin in zon, zee én cultuur? Boek vliegtickets naar Barcelona en laat u overweldigen door Gaudi's bouwwerken, FC Barcelona en de mooiste winkels. U komt ogen en oren tekort! Want naast Gaudi’s Sagrada Familia, Parc Güell en Casa Mila, vindt u in Barcelona...",
+    "visualUrlSmall": "/travel/en/images/0528B72E-201B-472F-8160-42EA1AA9E7E9_tcm493-438267_300x300_80.jpg",
+    "visualUrlMedium": "/travel/en/images/0528B72E-201B-472F-8160-42EA1AA9E7E9_tcm493-438267_600x600_80.jpg",
+    "compId": "tcm:501-466691",
+    "lastPublished": "2014-03-17T17:05:25+0100",
+    "lastChanged": "2013-11-29T12:10:24+0100",
+    "destinationLink":"/travel/{country}_{language}/apps/ebt/calendar.htm?application=TIF&country={COUNTRY}&language={language}&origin={origin}&destination=AAL&canModify=ORIGIN%2CDESTINATION&WT.seg_4=TIF_EBT_AAL",
+    "pricesLink":"/travel/{country}_{language}/apps/ebt/calendar.htm?application=TIF&country={COUNTRY}&language={language}&origin={origin}&destination=AAL&canModify=ORIGIN%2CDESTINATION&WT.seg_4=TIF_EBT_AAL"
+-->

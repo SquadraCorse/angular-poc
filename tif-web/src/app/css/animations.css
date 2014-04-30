@@ -1,0 +1,30 @@
+.tif-destination.ng-enter,
+.tif-destination.ng-leave,
+.tif-destination.ng-move {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+
+.tif-destination.ng-enter,
+.tif-destination.ng-move {
+  opacity: 0;
+  overflow: hidden;
+}
+
+.tif-destination.ng-move.ng-move-active,
+.tif-destination.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.tif-destination.ng-leave {
+  opacity: 1;
+  overflow: hidden;
+}
+
+.tif-destination.ng-leave.ng-leave-active {
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}

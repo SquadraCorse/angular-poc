@@ -1,0 +1,31 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.klm.tif-NG</groupId>
+    <artifactId>tif-NG-parent</artifactId>
+
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <scm>
+        <connection>scm:git:https://stash.eden.klm.com/scm/fe/angular-poc.git</connection>
+        <developerConnection>scm:git:https://stash.eden.klm.com/scm/fe/angular-poc.git</developerConnection>
+        <url>https://stash.eden.klm.com/scm/fe/angular-poc.git</url>
+        <tag></tag>
+    </scm>
+
+    <modules>
+        <module>tif-web</module>
+    </modules>
+
+    <!--exclude js libraries, root is configured in bamboo: "src" : "tif-web/" -->
+    <properties>
+        <package.name>tif-web-${project.version}-NG</package.name>
+        <sonar.exclusions>app/js/lib/**</sonar.exclusions>
+        <sonar.javascript.lcov.reportPath>target/karma-coverage/lcov.info</sonar.javascript.lcov.reportPath>
+        <!--sonar.javascript.lcov.reportPath>lcov.info</sonar.javascript.lcov.reportPath-->
+        <sonar.javascript.jstest.reportsPath>target</sonar.javascript.jstest.reportsPath>
+    </properties>
+
+</project>

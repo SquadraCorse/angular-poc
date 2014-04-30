@@ -1,0 +1,16 @@
+{
+    "destinationCode":"AAL",
+    "countryCode":"DK",
+    "continentCode":"EUR",
+    "flightDuration":{"hours":1,"minutes":20},
+    "minTemperature":12,"maxTemperature":20,
+    "popularity":5,
+    "minimumPrice":{"currency":"EUR","displayPrice":178},
+    "themes":["ART","CUL","ROM"],
+    "coordinates":{"lat":57.08944,"lon":9.84889},
+    "introText":"Zin in zon, zee én cultuur? Boek vliegtickets naar Barcelona en laat u overweldigen door Gaudi's bouwwerken, FC Barcelona en de mooiste winkels. U komt ogen en oren tekort! Want naast Gaudi’s Sagrada Familia, Parc Güell en Casa Mila, vindt u in Barcelona...",
+    "visualUrlSmall": "/travel/en/images/C3FD604F-73A4-455B-911D-0E7E059EC45D_tcm493-492470_300x300_80.jpg",
+    "visualUrlMedium": "/travel/en/images/C3FD604F-73A4-455B-911D-0E7E059EC45D_tcm493-492470_600x600_80.jpg",
+    "compId": "tcm:501-466691","lastPublished":"2014-03-17T17:05:25+0100","lastChanged":"2013-11-29T12:10:24+0100","destinationLink":"/travel/{country}_{language}/apps/ebt/calendar.htm?application=TIF&country={COUNTRY}&language={language}&origin={origin}&destination=AAL&canModify=ORIGIN%2CDESTINATION&WT.seg_4=TIF_EBT_AAL",
+    "pricesLink":"/travel/{country}_{language}/apps/ebt/calendar.htm?application=TIF&country={COUNTRY}&language={language}&origin={origin}&destination=AAL&canModify=ORIGIN%2CDESTINATION&WT.seg_4=TIF_EBT_AAL"
+}
