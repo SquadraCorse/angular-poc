@@ -1,9 +1,9 @@
-*.iml
-.settings
-.project
+logs/*
+!.gitkeep
+node_modules/
+bower_components/
+tmp
 .idea
-Thumbs.db
-*.sublime-project
-*.sublime-workspace
-*.bat
-*.DS_Store
+.DS_Store
+angular-tifapp-snapshots
+target
