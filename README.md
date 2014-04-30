@@ -2,7 +2,22 @@
 
 ## Overview
 
-Demonstration showing benefits using framework like Angular
+Demonstration showing benefits using framework like Angular. Current setup:
+
+-Github
+-CodeShip (hook to github, doing unit tests and deploy to heroku)
+-Heroku/cloud
+-Travis-ci
+
+<img src="https://travis-ci.org/SquadraCorse/angular-poc.svg?branch=master" /><br />
+<img src="https://www.codeship.io/projects/7aef6a10-b206-0131-890f-4214b91a45ce/status" />
+
+
+## Status
+https://github.com/SquadraCorse/angular-poc 
+https://www.codeship.io/projects/20027 
+https://travis-ci.org/SquadraCorse/angular-poc 
+http://travel-search.herokuapp.com/ 
 
 ### Running the app during development
 
