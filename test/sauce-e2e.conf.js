@@ -10,7 +10,7 @@ exports.config = {
         'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
         'build': process.env.TRAVIS_BUILD_NUMBER,
         'name': 'POC build CHROME ' + process.env.TRAVIS_BUILD_NUMBER
-    }, {
+    }/*, {
         'browserName': 'internet explorer',
         "platform": "Windows 7",
         "version": "8",
