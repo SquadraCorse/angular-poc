@@ -3,8 +3,15 @@
   "private": true,
   "name": "klm-tif-destinations",
   "description": "A tutorial application using AngularJS",
-  "repository": "https://github.com/...",
+  "repository": "https://github.com/SquadraCorse/angular-poc",
   "license": "MIT",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "dependencies" : {
+    "express" : "3.x"
+  },
   "devDependencies": {
 
     "grunt": "~0.4.1",
@@ -28,7 +35,9 @@
     "protractor": "~0.20.1",
     "http-server": "^0.6.1",
     "shelljs": "^0.2.6"
+
   },
+
   "scripts": {
 
     "start": "http-server -p 8000",
