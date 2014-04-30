@@ -9,7 +9,7 @@ exports.config = {
         'version': '34',
         'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
         'build': process.env.TRAVIS_BUILD_NUMBER,
-        'name': 'POC build ' + process.env.TRAVIS_BUILD_NUMBER
+        'name': 'POC build CHROME ' + process.env.TRAVIS_BUILD_NUMBER
     }, {
         'browserName': 'internet explorer',
         "os": "Windows XP",
@@ -19,6 +19,13 @@ exports.config = {
         'build': process.env.TRAVIS_BUILD_NUMBER,
         'name': 'POC build IE8 ' + process.env.TRAVIS_BUILD_NUMBER
     }, {
+        'browserName': 'opera',
+        'platform': 'Windows 7',
+        'version': '12',
+        'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+        'build': process.env.TRAVIS_BUILD_NUMBER,
+        'name': 'POC build OPERA ' + process.env.TRAVIS_BUILD_NUMBER
+    } /*
         'browserName': 'android',
         'platform': 'Linux',
         'version': '4.3',
@@ -27,7 +34,7 @@ exports.config = {
         'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
         'build': process.env.TRAVIS_BUILD_NUMBER,
         'name': 'POC build ' + process.env.TRAVIS_BUILD_NUMBER
-    }],
+    }*/],
 
 
 
