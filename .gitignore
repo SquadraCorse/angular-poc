@@ -5,5 +5,4 @@ bower_components/
 tmp
 .idea
 .DS_Store
-angular-tifapp-snapshots
 target

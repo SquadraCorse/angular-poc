@@ -1,52 +1,52 @@
 {
-  "version": "0.0.1",
-  "private": true,
-  "name": "klm-tif-destinations",
-  "description": "A tutorial application using AngularJS",
-  "repository": "https://github.com/SquadraCorse/angular-poc",
-  "license": "MIT",
-  "engines": {
-    "node": "0.10.x",
-    "npm": "1.2.x"
-  },
-  "dependencies" : {
-    "express" : "3.x"
-  },
-  "devDependencies": {
+	"version": "0.0.1",
+	"private": true,
+	"name": "klm-tif-destinations",
+	"description": "A tutorial application using AngularJS",
+	"repository": "https://github.com/SquadraCorse/angular-poc",
+	"license": "MIT",
+	"engines": {
+		"node": "0.10.x",
+		"npm": "1.2.x"
+	},
+	"dependencies" : {
+		"express" : "3.x"
+	},
+	"devDependencies": {
 
-    "grunt": "~0.4.1",
+		"grunt": "~0.4.1",
 
-    "grunt-shell": "~0.2.2",
-    "grunt-text-replace": "0.3.9",
-    "grunt-contrib-connect": "~0.1.2",
-    "grunt-contrib-copy": "~0.5.0",
-    "grunt-contrib-uglify": "~0.4.0",
-    "grunt-contrib-clean": "~0.5.0",
+		"grunt-shell": "~0.2.2",
+		"grunt-text-replace": "0.3.9",
+		"grunt-contrib-connect": "~0.1.2",
+		"grunt-contrib-copy": "~0.5.0",
+		"grunt-contrib-uglify": "~0.4.0",
+		"grunt-contrib-clean": "~0.5.0",
 
-    "grunt-protractor-runner": "~0.2.4",
-    "karma": "~0.10.2",
-    "grunt-karma": "~0.6.2",
+		"grunt-protractor-runner": "~0.2.4",
+		"karma": "~0.10.2",
+		"grunt-karma": "~0.6.2",
 
-    "karma-coverage": "~0.1",
-    "karma-junit-reporter": "*",
-    "karma-phantomjs-launcher": "~0.1.0",
-    "karma-ng-scenario": "latest",
+		"karma-coverage": "~0.1",
+		"karma-junit-reporter": "*",
+		"karma-phantomjs-launcher": "~0.1.0",
+		"karma-ng-scenario": "latest",
 
-    "protractor": "~0.20.1",
-    "http-server": "^0.6.1",
-    "shelljs": "^0.2.6"
+		"protractor": "~0.20.1",
+		"http-server": "^0.6.1",
+		"shelljs": "^0.2.6"
 
-  },
+	},
 
-  "scripts": {
+	"scripts": {
 
-    "start": "http-server -p 8000",
-    "test": "karma start test/karma.conf.js",
+		"start": "http-server -p 8000",
+		"test": "karma start test/karma.conf.js",
 
-    "update-webdriver": "webdriver-manager update",
-    "protractor": "protractor test/protractor-conf.js",
-    "test-single-run": "karma start test/karma.conf.js  --single-run",
+		"update-webdriver": "webdriver-manager update",
+		"protractor": "protractor test/protractor-conf.js",
+		"test-single-run": "karma start test/karma.conf.js  --single-run",
 
-    "update-index-async": "node -e \"require('shelljs/global'); sed('-i', /\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/, '//@@NG_LOADER_START@@\\n' + cat('bower_components/angular-loader/angular-loader.min.js') + '\\n//@@NG_LOADER_END@@', 'app/index-async.html');\""
-  }
+		"update-index-async": "node -e \"require('shelljs/global'); sed('-i', /\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/, '//@@NG_LOADER_START@@\\n' + cat('bower_components/angular-loader/angular-loader.min.js') + '\\n//@@NG_LOADER_END@@', 'app/index-async.html');\""
+	}
 }

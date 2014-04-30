@@ -2,20 +2,18 @@
 /* global module, require */
 module.exports = function (grunt) {
 
-    'use strict';
+	'use strict';
 
-    // TODO: http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html
-    // TODO: e2e not working
 
-    // TODO: KARMA IN SONAR: http://blog.jdriven.com/2013/12/integrating-karma-0-10-tests-in-maven-with-sonarcube-test-coverage/
+	// POC DONE: HAVE FREAK-ANGULAR IN CURRENT PIPELINE GENERATING UNIT AND COVERAGE REPORTING
+	// POC NOW: SHOW COMPLETE STACK TO HAVE FEATURE BASED DEVELOPMENT IN PLACE
 
-    grunt.option('force', true);
-    //grunt.option('debug', true);
+	grunt.option('force', true);
+	//grunt.option('debug', true);
 
-    grunt.initConfig({
+	grunt.initConfig({
 
-        // Be sure to update your version number when deploying to live
-        pkg: grunt.file.readJSON('package.json'),
+		pkg: grunt.file.readJSON('package.json'),
 
 		shell: {
 			options : {
@@ -24,12 +22,12 @@ module.exports = function (grunt) {
 			npm_install: {
 				command: 'npm install'
 			}
-	    },
+		},
 
 		connect: {
 			options: {
 				hostname: 'localhost',
-                base: './'
+				base: './'
 			},
 			test: {
 				options: {
@@ -77,7 +75,7 @@ module.exports = function (grunt) {
 						"src/app/js/lib/angular-animate.js",
 						"src/app/js/lib/angular-route.js",
 						"src/app/js/lib/angular-resource.js"
-                    ]
+					]
 				}
 			}
 		},
@@ -94,48 +92,50 @@ module.exports = function (grunt) {
 			dev: {
 				options: {
 					configFile: "test/protractor-grunt.js",
-			  		args: { }
-			  	}
+					args: { }
+				}
 			},
 
 			sauce: {
 				options: {
 					configFile: "test/sauce-e2e.conf.js",
-			  		args: { }
-			  	}
+					args: { }
+				}
 			}
 
 		},
 
-        clean: {
-            target: ["target/"]
-        },
+
+		clean: {
+			target: ["target/"]
+		},
+
 
 		// TODO: NOT REPLACING BUT COPY TASK IS NOW ENOUGH
 		replace : {
-            coverage : {
-                src: ['target/karma-coverage/PhantomJS*/lcov.info'],
-                dest: 'target/karma-coverage/lcov.info',
-                replacements: [
-                    {
-                        from : 'SF:./',
-                        to : 'SF:./'
-                    }
-                ]
-            }
+			coverage : {
+				src: ['target/karma-coverage/PhantomJS*/lcov.info'],
+				dest: 'target/karma-coverage/lcov.info',
+				replacements: [
+					{
+						from : 'SF:./',
+						to : 'SF:./'
+					}
+				]
+			}
 
-        }
-
-
-    });
+		}
 
 
-    // Load tasks
+	});
+
+
+	// Load tasks
 	grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.loadNpmTasks('grunt-text-replace');
+	grunt.loadNpmTasks('grunt-text-replace');
 	grunt.loadNpmTasks('grunt-shell');
 	grunt.loadNpmTasks('grunt-karma');
 	grunt.loadNpmTasks('grunt-protractor-runner');
