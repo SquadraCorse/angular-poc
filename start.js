@@ -1,10 +1,10 @@
 var express = require('express');
 var app = express();
 
-// New call to compress content
 app.use(express.compress());
 
-app.use('/', express.static(__dirname + '/src/app'));
+app.use('/', express.static(__dirname + '/src/app', {maxAge: 86400000}));
+
 
 app.listen(process.env.PORT || 3000);
 
