@@ -10,7 +10,7 @@ Demonstration showing benefits using framework like Angular. Current setup:
 - Sauce Labs
 - Heroku
 
-<img src="https://travis-ci.org/SquadraCorse/angular-poc.svg?branch=master" /><br />
+[![Build Status](https://travis-ci.org/SquadraCorse/angular-poc.svg)](https://travis-ci.org/SquadraCorse/angular-poc) <br/>
 <img src="https://www.codeship.io/projects/7aef6a10-b206-0131-890f-4214b91a45ce/status" />
 
 
