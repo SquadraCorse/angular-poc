@@ -2,13 +2,13 @@
 
 ## Overview
 
-Demonstration showing benefits using framework like Angular. Current setup:
+Demonstration showing benefits using framework like Angular in our search widget part. For all our front-end magic we use Grunt. Current setup:
 
-- Github
-- CodeShip (hook to github, doing unit tests and deploy to heroku)
-- Travis-ci
-- Sauce Labs
-- Heroku
+- Github (purely for this demo)
+- CodeShip (hook to github, doing unit/e2e tests, build package and deploy to cloud)
+- Travis-ci (purely to show how e2e looks like in console, task itself is in CodeShip)
+- Sauce Labs (virtual browsers)
+- Heroku (sample cloud)
 
 [![Build Status](https://travis-ci.org/SquadraCorse/angular-poc.svg)](https://travis-ci.org/SquadraCorse/angular-poc) <br/>
 <img src="https://www.codeship.io/projects/7aef6a10-b206-0131-890f-4214b91a45ce/status" />
@@ -16,7 +16,7 @@ Demonstration showing benefits using framework like Angular. Current setup:
 
 ## Resources
 1. https://github.com/SquadraCorse/angular-poc (source code)
-2. https://www.codeship.io/projects/20027 (codeship setup: from commit master to publishing on Heorku)
+2. https://www.codeship.io/projects/20027 (codeship setup: from commit master to publishing on Heroku)
 3. https://travis-ci.org/SquadraCorse/angular-poc (travis: do grunt build (packaging) and unit and e2e testing)
 4. http://travel-search.herokuapp.com/ (heroku: deploy app)
 
