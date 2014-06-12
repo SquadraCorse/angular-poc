@@ -23,16 +23,16 @@
 		"grunt-contrib-uglify": "~0.4.0",
 		"grunt-contrib-clean": "~0.5.0",
 
-		"grunt-protractor-runner": "~0.2.4",
-		"karma": "~0.10.2",
-		"grunt-karma": "~0.6.2",
+		"grunt-protractor-runner": "~1.0.0",
+		"karma": "~0.12.16",
+		"grunt-karma": "~0.8.3",
 
 		"karma-coverage": "~0.1",
 		"karma-junit-reporter": "*",
 		"karma-phantomjs-launcher": "~0.1.0",
 		"karma-ng-scenario": "latest",
 
-		"protractor": "~0.20.1",
+		"protractor": "~0.24.1",
 		"http-server": "^0.6.1",
 		"shelljs": "^0.2.6"
 
