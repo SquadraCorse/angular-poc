@@ -20,7 +20,7 @@ function ($scope, DestinationService) {
     // CONFIGURATION
     $scope.config = {};
     $scope.config.limit = 10;
-    $scope.ordering = 'popularity';
+    $scope.orderProp = 'popularity';
     $scope.config.orderProp = ['popularity', 'destinationCode'];
     $scope.config.reverse = false;
     $scope.config.isLoading = false;
@@ -88,7 +88,7 @@ function ($scope, DestinationService) {
 
     // ORDERING USING SPECIFIC WHISHES
     // FUGLY
-    $scope.$watch('ordering', function(value) {
+    $scope.$watch('orderProp', function(value) {
 
         $scope.config.limit = 10;
 

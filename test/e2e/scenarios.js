@@ -51,18 +51,22 @@ describe('DESTINATION SEARCH:', function () {
 
             query.sendKeys('AB'); //let's narrow the dataset to make the test assertions shorter
 
-            element(by.model('ordering')).findElement(by.css('option[value="destinationCode"]')).click();
+
+
+            
+            element(by.css('option[value="destinationCode"]')).click();
 
             expect(getNames()).toEqual([
                 'ABJ', 'ABV', 'ABZ', 'ADD', 'ALG', 'BGO', 'BIA', 'BOM', 'BRS', 'BSL'
             ]);
 
 
-            element(by.model('ordering')).findElement(by.css('option[value="popularity"]')).click();
+            element(by.css('option[value="popularity"]')).click();
 
             expect(getNames()).toEqual([
                 'CPT', 'KUL', 'NBO', 'ABZ', 'BOM', 'EDI', 'FLR', 'GLA', 'GOT', 'GVA'
             ]);
+
 
         });
 
