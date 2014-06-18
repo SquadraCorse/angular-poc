@@ -2,6 +2,8 @@ exports.config = {
 
     allScriptsTimeout: 11000,
 
+    chromeDriver: 'node_modules/grunt-protractor-runner/node_modules/protractor/selenium/chromedriver',
+    
     specs: [
         'e2e/*.js'
     ],
